@@ -53,7 +53,7 @@ dependencies {
     compileOnly(if (mindustryVersion == "be") "Anuken:MindustryBuilds:latest" else "Anuken:Mindustry:$mindustryVersion")
     testImplementation(kotlin("test"))
 
-    implementation("net.dv8tion:JDA:6.6.0") {
+    implementation("net.dv8tion:JDA:6.7.0") {
         exclude(module = "opus-java")
     }
 }
