@@ -12,7 +12,7 @@ jobs:
       uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
-        java-version: 17
+        java-version: 25
     - name: Build plugin jar
       run: ./gradlew jar
     - name: Upload built jar file
