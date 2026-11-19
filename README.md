@@ -5,7 +5,7 @@ To edit the plugin display name and other data, take a look at `src/main/resourc
 
 ### Basic Usage
 
-See `src/example/ExamplePlugin.java` for some basic commands and event handlers.  
+See `src/main/kotlin/example/ExamplePlugin.kt` for some basic commands and event handlers.  
 Every main plugin class must extend `Plugin`. Make sure that `src/main/resources/plugin.json` points to the correct main plugin class.
 
 ### Building a Jar
