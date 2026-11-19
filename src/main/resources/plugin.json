@@ -1,7 +1,7 @@
 {
-  "name": "ExamplePlugin",
-  "author": "Anuke",
-  "main": "example.ExamplePlugin",
-  "description": "A plugin to demonstrate some basic features.",
+  "name": "md-discord-integration",
+  "author": "firflor",
+  "main": "flor.dsplugin.DiscordPlugin",
+  "description": "A plugin for discord integration.",
   "version": 1.0
 }
