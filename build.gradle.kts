@@ -7,6 +7,16 @@ sourceSets.main {
     java.setSrcDirs(listOf("src"))
 }
 
+val javaVersion = 25
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(javaVersion))
+}
+
+kotlin {
+    jvmToolchain(javaVersion)
+}
+
 repositories {
     mavenCentral()
 
@@ -42,6 +52,10 @@ val mindustryVersion = "latest"
 dependencies {
     compileOnly(if (mindustryVersion == "be") "Anuken:MindustryBuilds:latest" else "Anuken:Mindustry:$mindustryVersion")
     testImplementation(kotlin("test"))
+
+    implementation("net.dv8tion:JDA:6.6.0") {
+        exclude(module = "opus-java")
+    }
 }
 
 tasks.jar {
@@ -50,8 +64,4 @@ tasks.jar {
     from({
         configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
     })
-}
-
-kotlin {
-    jvmToolchain(17)
 }
